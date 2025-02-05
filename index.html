@@ -212,8 +212,8 @@
             { title: "Current Time", info: "9:55 AM." }, 
             { title: "Address of Origin", info: "3070 Numana Rd, Urban Honolulu, HI 96819." },
             { title: "Address of Destination", info: "1350 Sand Island Parkway, Honolulu, HI 96819." },
-            { title: "Distance to Destination", info: " " },
-            { title: "Estimated Time to Destination", info: " " },
+            { title: "Distance to Destination", info: "5.62 miles." },
+            { title: "Estimated Time to Destination", info: "17 minutes." },
             { title: "State of Charge of Battery", info: "12% charge." },
             { title: "Range of Current Battery", info: "36 minutes." },
             { title: "Estimated Drive Distance with Current Charge", info: "24 miles." },
@@ -231,10 +231,10 @@
                 name: 'Bishop Museum',
 
                 location: '1525 Bernice St, Honolulu, HI 96817, USA',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '2.28',
+                originTime: '6',
+                destDistance: '3.69',
+                destTime: '14',
 
                 waitTime: [
                         { type: 'J1772', value: '0' }
@@ -270,10 +270,10 @@
                 name: 'Honolulu Exotics Luxury Car Rental & Auto Spa',
 
                 location: '1824 Auiki St, Honolulu, HI 96819, USA',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '3.58',
+                originTime: '11',
+                destDistance: '1.88',
+                destTime: '6',
 
                 
                 waitTime: [
@@ -286,7 +286,7 @@
                     ],
                 chargeTime: [
                         { type: 'J1772', value: '580' },
-                        { type: 'NACS', value: '180' }
+                        { type: 'NACS', value: '' }
                     ],
                 socketAvalability: [
                         { type: 'J1772', value: '1' },
@@ -939,8 +939,8 @@
         // Add route time/distance to instructions & update charging station details
         map.on('load', async () => {
             await getRoute(0); // Ensure this is awaited properly
-            await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
-            await updateChargingStationDetails();  // Ensure this is awaited properly
+            // await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
+            // await updateChargingStationDetails();  // Ensure this is awaited properly
             addChargingStations();  // You might need to re-add stations to reflect updated data
         });
 
